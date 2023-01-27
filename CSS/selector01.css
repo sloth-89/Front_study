@@ -1,0 +1,17 @@
+
+/* 전체 선택자 */
+* {background: beige;}
+
+/* class 선택자 */
+.className {
+
+    background: gray;
+
+}
+
+/* id 선택자 */
+#idName {
+
+    background: violet;
+
+}

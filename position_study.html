@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="파일명.css"> -->
+
+    <style>  
+        body {
+            /* ↓ 여백 ↓ */
+            margin: 0;
+        }
+
+        div {
+            /* ↓ 테두리 ↓ */
+            border: 5px solid black;
+            /* ↓ 간격 ↓ */
+            padding: 40px;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <div> Hello 1 </div>
+    <div style="position: relative;"> Hello 2 
+        <div> Hello 3 
+            <div> Hello 4 </div>
+
+            <div style="background-color: pink;
+                        position: static;
+                        left: 200px"> static </div>
+
+            <div style="background-color: red;
+                        position: relative;
+                        left: 200px"> relative </div>
+
+            <div style="background-color: aqua;
+                        position: absolute;
+                        top: -5px;
+                        left: 135px;"> absolute </div>
+
+            <div style="background-color: beige;
+                        position: fixed;
+                        top: 0px;
+                        left: 140px;"> fixed </div>
+
+            <div> Hello 5 </div>
+
+        </div>
+    </div>    
+
+</body>
+</html>

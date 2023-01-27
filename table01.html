@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            border-collapse: collapse; /* border 간의 간격을 없앰 */ 
+        }
+        
+        th, td{
+            border: 1px solid red;
+        }
+
+    </style>
+
+</head>
+<body>
+    <table>
+
+        <col style="background-color: rgb(231, 214, 102);"> <!-- 닫는 태그가 없다 -->
+        <col style="background-color: beige;" span="4"> <!-- span은 범위 지정(시작점은 적힌 자리부터) -->
+        <col>
+        <col>
+        <col>
+
+        <tr> 
+            <th> 학생이름 </th>
+            <th> 국어점수 </th>
+            <th> 영어점수 </th>
+            <th> 수학점수 </th>
+            <th> 과학점수 </th>
+        </tr>
+        <tr> 
+            <td> 홍길동 </td>
+            <td> 90 </td>
+            <td> 70 </td>
+            <td> 90 </td>
+            <td> 80 </td>
+        </tr>
+        <tr> 
+            <td> 김영희 </td>
+            <td> 90 </td>
+            <td> 70 </td>
+            <td> 90 </td>
+            <td> 80 </td>
+        </tr>
+        <tr> 
+            <td> 이태성 </td>
+            <td> 90 </td>
+            <td> 70 </td>
+            <td> 90 </td>
+            <td> 80 </td>
+        </tr>
+        <tr> 
+            <td> 박민경 </td>
+            <td> 90 </td>
+            <td> 70 </td>
+            <td> 90 </td>
+            <td> 80 </td>
+        </tr>
+
+
+    </table>
+
+</body>
+</html>

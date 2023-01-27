@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> linear-gradient 컬러 효과 </title>
+
+    <style>
+        /* radial-gradient 원형 그라데이션
+        형식 : linear-gradient(모양 크기 at 위치, 색상)
+        모양 : 타원형 eclipse, 원형 circle
+        모양 지정없다면 디폴트 기본값은 타원형 eclipse 이다. */
+        .customColor2{
+            height: 100px;
+            width: 200px;
+        }
+        .circle1{
+            background: radial-gradient(white, yellow, red);
+        }
+        .circle2{
+            background: radial-gradient(circle, white, yellow, red);
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="customColor2 circle1"></div>
+    <div class="customColor2 circle2"></div>
+    
+</body>
+</html>

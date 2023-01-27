@@ -1,0 +1,76 @@
+.container {
+    background: gray;
+    height: 100vh; 
+    display: flex; /* 기본적으로 가로 */
+    flex-wrap: wrap;
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+    /* row - 행(가로)
+    column - 열(세로)
+    기본값은 row */
+}
+
+.item {
+    width: 50px;
+    height: 50px;
+}
+
+.item1 {
+    background-color: beige;
+}
+
+.item2 {
+    background-color: orange;
+}
+
+.item3 {
+    background-color: skyblue;
+}
+
+.item4 {
+    background-color: rgb(160, 95, 143);
+}
+
+.item5 {
+    background-color: rgb(135, 160, 95);
+}
+
+.item6 {
+    background-color: cadetblue;
+}
+
+.item7 {
+    background-color: rgb(160, 132, 95);
+}
+
+.item8 {
+    background-color: rgb(200, 212, 92);
+}
+
+.item9 {
+    background-color: rgb(136, 97, 97);
+}
+
+.item10 {
+    background-color: goldenrod;
+}
+
+.item11 {
+    background-color: greenyellow;
+}
+
+.item12 {
+    background-color: yellowgreen;
+}
+
+.item13 {
+    background-color: burlywood;
+}
+
+.item14 {
+    background-color: rosybrown;
+}
+
+.item15 {
+    background-color: tomato;
+}

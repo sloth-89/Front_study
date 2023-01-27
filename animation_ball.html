@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%; /* box를 깍아서 원을 만들 수 있다. */
+            position: relative; /* 객체가 원래 있던 자리를 기준 위치로 설정 */
+            left: 100px;
+            animation: movingball 3s ease-in infinite alternate;
+
+        }
+
+        /* 2개 이상의 애니메이션 중간 상태인 프레임을 지정한다. */
+
+        @keyframes movingball{
+            0%{
+                top: 0px;
+            }
+            90%{
+                width: 100px;
+            }
+            to{
+                top: 200px;
+                width: 120px;
+                height: 90px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- 속도에 관한 설정 기본값 : ease
+    속도에 관한 기타 옵션
+    ease : 천천히 시작되고 속도가 줄어들면서 끝(속도 차이가 적음)
+    ease-in : 천천히 시작/평균속도 유지
+    ease-out : 빠르게 시작/평균속도 유지
+    ease-in-out : 빠르게 시작되어 평균속도 유지(속도차이 큼)
+    linear : 일정한 속도로 진행
+    step-start : 시작하자마자 순간적으로 바뀜
+    step-end : 시작 유지되다가 끝날 때 순간적으로 바뀜
+    steps(5,end or start) : 5번으로 나누어 끊어지듯 진행됨
+    ex) 10초 동안 진행되는 애니메이션이라면
+        steps(5,end) -> 2,4,6,8초에 순간적으로 변화
+        steps(5,start) -> 0,2,4,6,8초에 순간적으로 변화 -->
+
+    <div></div>
+
+</body>
+</html>

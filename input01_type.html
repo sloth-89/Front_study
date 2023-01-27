@@ -1,0 +1,107 @@
+
+<!-- input 태그의 type의 종류
+1. text : 기본값으로 한 줄의 텍스트 입력 칸을 만듬
+2. password : text 속성과 같지만, 입력값이 안보이게 *로 표시
+3. checkbox : 선택 항목 중 여러개를 선택할 수 있는 체크박스를 만듬
+4. radio : 선택 항목 중 1가지만 선택 가능한 라디오 버튼을 만듬
+5. button : 누를 수 있는 기본 버튼
+6. submit : 전송버튼
+7. reset : 초기화, 재설정 버튼
+8. file : 파일 선택창을 여는 버튼
+9. hidden : 사용자에게 보이지 않는 숨김 창
+10. image : 이미지로 된 전송 버튼
+<HTML5에 새로 추가된 type 속성>
+11. color : 색상 선택 창
+12. date : 년, 월, 일을 입력할 수 있는 날짜 입력창
+13. datetime : 년, 월, 일, 시, 분, 초의 분할까지 입력할 수 있는 표준시간날짜시간 입력창
+14. datetime-local : 년, 월, 일, 시, 분, 초의 분할까지 입력할 수 있는 표준시간이 아닌 날짜 시간 입력창
+15. month : 년, 월 입력창
+16. week : 표준시간이 아닌 년, 주 입력창
+17. number : 숫자 입력창
+18. range : 슬라이더 같은 정확한 값이 중요하지 않는 숫자를 입력하는 창
+19. search : 검색창
+20. tel : 전화번호 입력창
+21. time : 표준시간이 아닌 시간 입력창
+22. url : 인터넷 주소 입력창
+23. email : 이메일 주소창 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .formBox{
+            width: 150px;
+            height: 150px;
+            background-color: bisque;
+            outline: auto;
+            margin: auto;
+        }
+        .formBox2{
+        width: 130px;
+        height: 130px;
+        background-color: blanchedalmond;
+        outline: auto;
+        margin: auto;
+        }
+        .formBox3{
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--1.  checkbox 연습 -->
+<form class="formBox" action="url"> <br>
+    <input type="checkbox" id="fruitId1">
+    <label for="fruitId1"> apple </label> <br>
+    <input type="checkbox" id="fruitId2">
+    <label for="fruitId2"> kiwi </label> <br>
+    <input type="checkbox" id="fruitId3">
+    <label for="fruitId3"> orange </label> <br><br>
+
+    <div style="text-align: center;">
+        <input type="submit" value="전송"> <!-- value에는 들어갈 글자 -->
+    </div>
+</form> <br>
+
+    <!-- 2. radio 연습 -->
+<form class="formBox2" action="url" style="text-align: center;"> <br>
+    <!-- 중앙정렬 하고 싶은 객체의 부모태그에 text-align: center를 준다 -->
+
+    <input type="radio" id="man" name="gender">
+    <label for="man"> 남성 </label> <br>
+    <input type="radio" id="women" name="gender">
+    <label for="women"> 여성 </label> <br><br>
+
+    <input type="submit" value="전송"> <!-- value에는 들어갈 글자 -->
+
+</form> <br><br>
+
+    <!-- 3. date, datetime-local 활용하여 달력 생성하기 -->
+<form class="formBox3" action="url">
+    <input type="date"> <br><br>
+    <input type="datetime-local"> <br><br>
+</form>
+    <!-- 4. number -->
+<form class="formBox4" action="url" style="text-align: center;">
+    <label for="quantity"> <h2> 도서 주문 수량 작성해주세요 </h2> </label>
+    <label for="quanity"> 주문수량 </label>
+    <input type="number" name="quantity" min="1" max="5">
+    <input type="submit" value="전송">
+</form> <br><br><br>
+
+    <!-- 5. button / alert -->
+<form action="url" style="text-align: center;">
+    <input type="button" value="제출" onclick="alert('제출되었습니다.')">
+</form> <br><br>
+
+
+</body>
+</html>

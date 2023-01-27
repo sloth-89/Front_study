@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 사용자로부터 30이상을 입력해주세요 라는 문구를 
+        2번 보여주고 데이터를 2번 받아 저장하자
+
+    숫자 2개가 모두 30이상이면 "숫자 2개가 모두 30이상이 맞습니다."
+    그렇지 않으면 "조건에 맞지 않습니다." -->
+
+</head>
+<body>
+
+    <script>
+
+        let num1 = prompt("30이상을 입력해주세요.")
+        let num2 = prompt("30이상을 입력해주세요.")
+
+        if(num1>=30 && num2>=30){
+            alert("숫자 2개가 모두 30이상이 맞습니다.")
+        } else {
+            alert("조건에 맞지 않습니다.")
+        }
+
+    </script>
+    
+</body>
+</html>

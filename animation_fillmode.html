@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .common{
+            background-color: tomato;
+            width: 50%;
+            height: 50px;
+            margin: 10px 0px;
+        }
+        @keyframes running{
+            from{width: 10%;}
+            to{width: 100%;}
+        }
+        .common{
+            animation-name: running;
+            animation-duration: 5s;
+            animation-delay: 0.5s;
+        }
+        
+        .a{animation-fill-mode: none;}
+        .b{animation-fill-mode: forwards;}
+        .c{animation-fill-mode: backwards;}
+        .d{animation-fill-mode: both;}
+
+    </style>
+
+    <!-- animation-fill-mode:
+
+    none : 애니메이션이 끝난 후 상태설정을 하지 않는 경우
+    forwards : 애니메이션이 끝난 지점에 그대로 머무른다
+    backwards : 애니메이션이 끝난 후 시작점으로 돌아온다
+    both : 애니메이션의 앞 뒤 결과를 조합하는 설정
+    inherit : 애니메이션의 상태를 상위 요소한테 상속받음 -->
+
+</head>
+<body>
+
+    <!-- class명을 이중으로 넣어줄 수 있다. -->
+    <div class="common a"> none </div> 
+    <div class="common b"> forwards </div>
+    <div class="common c"> backwards </div>
+    <div class="common d"> both </div>
+    
+</body>
+</html>

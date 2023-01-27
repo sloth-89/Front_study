@@ -1,0 +1,75 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /* 객체가 다른 객체로 침범하지 않게 한다. */
+}
+
+header, nav, section, article, aside, footer{
+    background-color: burlywood;
+    display : block; /* 개체 네모박스 설정 */
+    margin : 3px;
+}
+
+header{
+    background-color: coral;
+    height: 100px;
+    width: 100%;
+    /* width: 100%; 블록 레벨 태그는 자동으로 옆을 채우는 성격이 있어서
+                    width 100%을 설정하지 않아도 된다. */
+}
+
+nav{
+    background-color: yellow;
+    height: 100px;
+    width: 80%;
+    margin: 0px auto; /* 0px은 상하, auto는 좌우 (개체를 중앙정렬) */
+    padding-top: 20px;
+}
+
+#topmenu{ /* ul */
+    list-style: none; /* 리스트 앞에 특수기호나 숫자를 없앤다. */
+    display: flex; /* 가로 정렬 */
+    background-color: skyblue;
+}
+
+#topmenu li{
+    position: relative;
+    background-color: aquamarine;
+    margin: 0px auto; /* 중앙 정렬 */
+    width: 70px;
+}
+
+#topmenu > li > ul{
+    position: absolute;
+    display: none;
+    list-style: none;
+}
+
+#topmenu > li:hover > ul{
+    display: block;
+}
+
+div{
+    display: flex; /* 이렇게 부모 태그에 flex를 넣어주면
+                    담겨진 각 블록이 나란히 옆으로 뜬다. */
+    height: 600px;
+}
+
+section{
+    width: 80%;
+}
+
+article{
+    background-color: beige;
+    width: 50%;
+}
+
+aside{
+    width: 20%;
+    float: right;
+}
+
+footer{
+    height: 100px;
+}

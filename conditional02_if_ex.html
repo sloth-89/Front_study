@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 
+        < 중첩 if문 연습 >
+    
+    전제조건 : 기존 저장된 id, pw
+    let id = 'korea'
+    let pw = 'korea123'
+
+    입력창에 id,pw 입력을 했을 떄 
+    조건 :
+    1) if : 기존 id랑 입력한 id 값이 같다면 ->
+    pw 비교 (기존 pw 와 입력한 pw 가 같다면 로그인이 되었습니다. 를 출력,
+            기존 pw 와 입력한 pw가 같지 않다면 비밀번호가 틀렸습니다. 라는 alert 창으로 알람을 주기)
+
+    1) else : 기존 id 랑 입력한 id 값이 같지 않다면 ->
+    입력한 아이디가 틀렸습니다. 를 출력 (alert 창으로 알람을 주기) -->
+
+</head>
+<body>
+    
+    <script>
+
+        let id = 'korea';
+        let pw = 'korea123';
+
+        let inputId = prompt("아이디를 입력하세요", ' ')
+        let inputPw = prompt("비밀번호를 입력하세요", ' ')
+        
+        if(id===inputId){
+            if(pw===inputPw){
+                document.write(id+" 님이 로그인이 되었습니다.")
+            } else {
+                alert("비밀번호가 틀렸습니다.")
+                location.reload(); // 앞 조건문을 반복해준다.
+            }      
+        } else {
+            alert("아이디가 틀렸습니다.")
+            location.reload();  
+        }
+
+    </script>
+
+</body>
+</html>

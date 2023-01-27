@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: cadetblue;
+            position: absolute;
+            left: 100px;
+
+            animation-name: movingbox;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            animation-duration: 2s; /* 2초 */
+        }
+
+        @-webkit-keyframes movingbox{
+            0%{
+                left: 100px;
+            }
+            100%{
+                left: 500px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- CSS의 애니메이션
+    : 자바스크립트를 모르더라도, 간단하게 애니메이션 효과를 만들 수 있다.
+
+    animation-name : 애니메이션의 상태를 지칭/호출 하기 위한 이름
+                        @keyframe 규칙을 이용하여 기술
+    animation-duration : 타임 프레임의 길이, 키프레임이 동작하는 시간 설정할 때 사용 (s/ms, 1s=1000ms)
+    animation-delay : 애니메이션을 시작하기 전 지연시간 설정
+    animation-itertion-count : 반복 횟수 지정 (숫자/infinite)
+    animation-timing-funtion : 애니메이션 속도조절/그래프 (linear/ease/ease-in/ease-out/ease-in-out/cubic-bezier)
+    animation-direction : 반복 방향 설정 (정방향/역방향/번갈아가며)
+    animation-fill-mode : 애니메이션 시작/끝 상태 제어 (none/forwords/backwords/both)
+    animation-play-state : 애니메이션 실행 중에 중지되었을 때 계속 진행하거나 멈추게 할 것인지를 지정 (paused) -->
+    
+    <!-- animation-direction의 종류
+    1. normal : 순방향 재생, 첫번째 재생이 한번 끝나면 첫번째 프레임부터 다시 시작
+    2. alternate : 순방향 시작, 역방향과 순방향으로 번갈아 재생,
+                    홀수번째로 재생할 때는 순방향으로 재생, 짝수번째로 재생할때는 역방향
+    3. reverse : 역방향으로 재생
+    4. alternate-reverse : 역방향 시작, 순방향과 역방향으로 번갈아 재생 -->
+
+    <!-- 재생할 프레임별 시간비율
+
+    0% 또는 from : 애니메이션 시작 프레임
+    100% 또는 to : 애니메이션 마지막 프레임
+
+    @-webkit-keyframes movingbox{
+        0%{/
+            left: 100px;
+        }
+        100%{
+            left: 300px;
+        }
+    } 
+    크롬 & 사파리 : -webkit- 
+    파이어폭스 : -moz-
+    오페라 : -o-
+    익스플로러 : -ms-
+    -->
+
+    <div> box </div>
+
+</body>
+</html>

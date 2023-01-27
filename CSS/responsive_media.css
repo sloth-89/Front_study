@@ -1,0 +1,9 @@
+.title{
+    font-size: 40px;
+}
+
+@media(max-width: 500px){ /* 기준 조건 */
+    .title{
+        font-size: 20px;
+    }
+} /* 폰트가 자동으로 작아지게 하는 미디어 쿼리 (폰 화면에도 적용) */

@@ -1,0 +1,134 @@
+<!-- 
+Map 함수
+
+구문
+arr.map(callback(currentValue[, index[, array]])[, thisArg])
+
+callback
+: 새로운 배열 요소를 생성하는 함수.
+다음 3가지 인수를 가진다.
+
+    currentValue
+    :처리할 현재 요소
+
+    index
+    : 처리할 혀냊 요소의 인덱스
+
+    array
+    : map()을 호출한 배열
+
+thisArg
+: callback을 실행할 때 this로 사용되는 값
+
+반환 값
+: 배열의 각 요소에 대해 실행한 callback의 결과를 모은 새로운 배열
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 배열의 내장함수 map과 filter 연습 </title>
+</head>
+<body>
+
+    <script>
+
+        const arr1 = [1, 2, 3, 4, 5]
+        const result = arr1.map(n => n*3); // n = 배열의 숫자 데이터
+        console.log(result);
+
+        // map 예제 1
+        // n값이 제곱이 되는 데이터들의 배열을 생성해보자!
+        const arr2 = [1, 2, 3, 4, 5, 6, 7, 8]
+        const squared = arr2.map(n => n**2);
+        console.log(squared);
+
+        // map 예제 2
+        // 객체를 활용한 배열의 map
+        const words = [
+            {
+                id:1,
+                text:'hi'
+            }, 
+            {
+                id:2,
+                text:'goodbye'
+            }
+        ]
+
+        const texts = words.map(word => word.text) // word를 입력하므로서 객체명이 되었다.
+        // (word =>) 에서 word는 배열전체 words에서 요소 하나를 받는 변수
+        // 죽, 객체이다. 코드로 보면 다음과 같다.
+        // let word  = {
+        //      id:1,
+        //      text:'hi'
+        // }
+        console.log(texts)
+
+        // map 예제 3
+        // map(value, index, array) 3개의 매개변수로 출력!
+        // value는 필수! index, array는 옵션이라 안 적어도 무방
+        const numbers = [5, 6, 7]
+        numbers.map((num,index,array) => {
+            console.log(num*3,index,array)
+        })
+
+        let array = [1,2,3]
+        // 화살표 함수 : const customMap = () => {}
+        const customMap = (array, func) => {
+            const result = [];
+            for(let i=0; i<array.length; i++){
+                result.push(func(array[i], i, array)) // func()
+            }
+            return result;
+        }
+        // 호출 customMap(데이터1, 데이터2)
+        customMap(numbers, (number, i, array) => console.log(number*3, i, array))
+
+        // map 예제 4
+        // find 함수
+
+        let todos = [
+            {
+                id: 1,
+                text: '자바스크립트 map 공부하기',
+                done: true
+            },
+            {
+                id: 2,
+                text: '자바스크립트 filter 공부하기',
+                done: false
+            },
+            {
+                id: 3,
+                text: '자바스크립트 reduce 공부하기',
+                done: true
+            },
+        ]
+        // findIndex는 index값을 찾음(todo는 객체{id:~, text:~, dong:~} 하나를 받는 중)
+        let index = todos.findIndex(todo => todo.id===3)
+        console.log(index) // 2
+        
+        // find는 요소 자체를 찾음
+        let todo = todos.find(todo => todo.id===3)
+        console.log(todo) // {id:3, text: '자바스크립트 reduce 공부하기', done: true}
+
+        let todo2 = todos.find(todo => todo.done===false)
+        console.log(todo2) // {id: 2, text: '자바스크립트 filter 공부하기', done: false}
+
+        // filter 내장함수
+        const tasksDone = todos.filter(todo => todo.done)
+        console.log(tasksDone)
+
+        const tasksNotDone = todos.filter(todo => !todo.done)
+        // 위의 코드와 동일 const taskNotDone = todos.filter(todo => todo.done === false)
+        console.log(tasksNotDone)
+
+    </script>
+    
+</body>
+</html>

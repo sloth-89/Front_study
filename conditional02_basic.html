@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <script>
+
+        const device = 'mouse'
+
+        switch(device){
+            case 'keyboard' : console.log('키보드');
+            break;
+
+            case 'mouse' : console.log('마우스');
+            break; // break 가 없으면 멈추지 않고 아래의 코드로 진행이 계속됨.
+                   // (해당 case조건에 해당하지 않는 경우도 출력됨)
+
+            case 'monitor' : console.log('모니터');
+            break;
+
+            default : console.log('알 수 없는 장비입니다.')
+        }
+
+        
+    // switch case - 커피 종류별 가격 조회하기
+
+    // (가격을 조회하고 싶은) 커피 종류를 입력한 데이터 값을
+    // 변수 coffee에 담아, switch 문으로 커피 종류별 가격을 출력한다.
+
+    // < 커피 종류 및 가격 >
+    // 아메리카노 / 1500
+    // 카페라떼 / 2000
+    // 카푸치노 / 3000 
+    // 그 외 잘못된 단어 입력시, 잘못된 단어를 입력했습니다.
+   
+    // switch 문 vs if 문 비교
+    // 1. switch 문
+    // 장점 : 가독성이 높다.
+    // 단점 : 상수 - switch()의 괄호안에는 데이터가 자유롭게 들어갈 수 있지만,
+    //        case 뒤에는 변수, 조건식 등이 오게 되면 switch 문이 작동하지 않는다.
+        
+    // 1) switch는 case 뒤에 변수 활용 불가능 - 아래의 코드는 오류 발생
+    // let num = prompt("원하는 숫자를 입력하세요.", "")
+
+    // switch(num){
+    //     case num > 0 :
+    //         document.write("입력한 숫자는 양수입니다.");
+    //     break;
+    //     
+    //     default
+    //         document.write("숫자를 입력해주세요.");
+    // }
+
+    // 2) if 문은 표현식에 변수 활용 가능
+    // let num = prompt("원하는 숫자를 입력하세요.", "")
+
+    // if(num > 0){
+    //      document.write("입력한 숫자는 양수입니다.");
+    // } else {
+    //      document.write("숫자를 입력해주세요.");
+    // }
+
+
+        let coffee = prompt('가격을 조회하고 싶은 커피종류를 입력하세요')
+
+            switch(coffee){
+            case '아메리카노' : document.write("아메리카노는 1500원 입니다.")
+            break;
+
+            case '카페라떼' : document.write("카페라떼는 2000원 입니다.")
+            break;
+
+            case '카푸치노' : document.write("카푸치노는 3000원 입니다.")
+            break;
+
+            default : document.write("없는 메뉴입니다.")
+        }
+    
+    // 위의 switch 문을 if문으로 변경
+
+    // 1-2. if 문
+    // if(coffee=='아메리카노'){
+    //     document.write("아메리카노는 1500원 입니다.")
+    // } else if(coffee=='카페라떼'){
+    //     document.write("카페라떼는 2000원 입니다.")    
+    // } else if(coffee=='카푸치노'){
+    //     document.write("카푸치노는 3000원 입니다.")
+    // } else {
+    //     document.write("없는 메뉴입니다.")
+    // }
+
+
+    </script>
+    
+</body>
+</html>

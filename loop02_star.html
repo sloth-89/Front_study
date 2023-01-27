@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 이중 for문 예제 - 별찍기 </title>
+</head>
+<body>
+    
+    <script>
+        // 사각
+        for(let i=0; i<5; i++){
+            for(let j=0; j<5; j++){
+                document.write("*");
+            }
+            document.write("<br>")
+        }
+        document.write("<br>")
+
+        // 삼각 - 우측으로 점점 크게
+        for(let i=0; i<5; i++){
+            for(let j=0; j<=i; j++){
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+        document.write("<br>")
+
+        // 삼각 - 좌측으로 점점 크게
+        for(let i=0; i<5; i++){
+            for(let j=4; j>i; j--){
+                document.write("&nbsp") // 줄 바꿈 없는 공백
+            }
+            for(let j=0; j<=i; j++){
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+        document.write("<br>")
+
+        // 역삼각 - 우측에서 넓다가 줄어들게
+        for(let i=0; i<5; i++){
+            for(let j=5; j>i; j--){
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+        document.write("<br>")
+
+        // 역삼각 - 좌측에서 넓다가 줄어들게
+        for(let i=0; i<5; i++){
+            for(let j=0; j<=i; j++){
+                document.write("&nbsp")
+            }
+            for(let j=5; j>i; j--){
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+        document.write("<br>")
+
+        // 정삼각형
+        for(let i=0; i<5; i++){
+            for(let j=4; j>i; j--){
+                document.write("&nbsp")
+            }
+            for(let j=0; j<=i; j++){
+                document.write("*")
+            }
+            for(let j=1; j<=i; j++){
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+        document.write("<br>")
+
+        //역삼각형
+        for(let i=0; i<5; i++){
+            for(let j=0; j<i; j++){
+                document.write("&nbsp")
+            }
+            for(let j=5; j>i; j--){
+                document.write("*")
+            }
+            for(let j=4; j>i; j--){
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+        document.write("<br>")
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!-- 
+function 함수 구성요소
+1. function 함수이름 예) function car, function menber 등등
+2. 괄호 안에 쉼표(,)로 구분되는 함수의 매개변수(parameter) 예) function car(a,b), function car(a) 등등
+3. 중괄호{}로 둘러싸인 자바스크립트 실행문 예) function car(a,b){}
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // function 함수로 나중에 사용하기 편하도록 미리 로직을 만들어둠
+        function twoNum(x,y){ // x, y는 parameter = 매개변수
+            return x+y // return 이후부터 추가코드 작성은 불가능
+        }
+        //function 함수를 호출해서 사용하기 - twoNum(20,30)이 호출되는 코드
+        let sum = twoNum(20, 30)
+            console.log(sum)
+
+        // 예제) function 함수와 if문 활용 - 성적출력하기
+
+        // 1) grade 라는 함수를 생성
+        // score 가 90이상이면 A 반환
+        // score 가 80이상이면 B 반환
+        // score 가 70이상이면 C 반환
+        // score 가 60이상이면 D 반환
+        // 그 밖에 나머지 score는 F
+
+        // 2) grade 함수 호출
+        // 테스트 코드에서는 50점을 넣었을 때
+        // 결과값을 출력해본다
+
+        function grade(score){
+            if(score>=90){
+                return 'A'
+            } else if (score>=80){
+                return 'B'
+            } else if (score>=70){
+                return 'C'
+            } else if (score>=60){
+                return 'D'
+            } else return 'F' // 1줄은 중괄호가 없어도 출력됨.
+        }
+
+        const result = grade(95) // 함수 호출해서 사용
+              console.log(result)
+
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @keyframes bigger{
+            from{
+                width: 0px;
+                height: 0px;
+                background-color: chartreuse;
+            }
+            to{
+                width: 100px;
+                height: 100px;
+                background-color: blueviolet;
+            }
+        }
+        #box{
+            margin: 30px auto; /* 첫번째는 가로, 두번째는 세로 */
+            animation: bigger 5s linear 0s reverse infinite;
+            /* animation-name: bigger;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-direction: reverse;
+            animation-iteration-count: infinite; */
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="box"></div>
+
+</body>
+</html>

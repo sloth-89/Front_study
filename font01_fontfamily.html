@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 글꼴 -->
+    <!-- font-family -->
+    <!-- font : family-name(글꼴이름) 또는 generic-family(글꼴유형) -->
+    <!-- initial : 기본값으로 설정 -->
+    <!-- inherit : 부모 요소의 속성값을 상속받음 -->
+    <!-- 글꼴 이름에 띄워쓰기가 있을 경우 작은 따옴표 또는 큰 따옴표로 감싼다. -->
+
+    <style>
+        .a{ font-family: Georgia, serif; }
+        /* 글꼴을 2개 이상 설정할 경우 앞 글꼴을 우선순위로 적용된다. */
+        .b{ font-family: serif; }
+        .c{ font-family: sans-serif; }
+        .d{ font-family: monospace; }
+        .e{ font-family: cursive; }
+        .f{ font-family: fantasy; }
+        .g{ font-family: Georgia, "맑은 고딕", serif; }
+        /* Georgia에는 한글이 없기 때문에 다음 글꼴이 적용된다.  */
+    </style>
+
+</head>
+
+<body>
+
+    <!-- p 태그는 굵기가 없고, h 태그는 굵기가 있다.  -->
+
+    <p class="a">font-family: Georgia;</p>
+    <p class="b">font-family: serif;</p>
+    <p class="c">font-family: sans-serif;</p>
+    <p class="d">font-family: monospace;</p>
+    <p class="e">font-family: cursive;</p>
+    <p class="f">font-family: fantasy;</p>
+    <p class="g"> 한글은 맑은 고딕, 나머지는 Georgia </p>
+
+    <!-- font-family
+    1. 원하는 글꼴을 선택할 수 있다.
+    2. 기본적으로 사용자의 컴퓨터에 설치되지 않은 글꼴은 사용할 수 없다.
+    3. 사용자의 컴퓨터에 해당 글꼴이 로드되지 않는 경우에 대비하여 여러 예비용 글꼴을 설정해놓을 수 있다.
+    *4*. 사용자에게 번거롭게 글꼴을 설치하게 하는 것 보다는 CDN을 많이 활용한다. (예: Google Fonts)
+         (CDN : Content Delivery Network - 로컬PC에 있는 자원을 사용하지 않고 외부 자원을 사용) -->
+    
+</body>
+</html>

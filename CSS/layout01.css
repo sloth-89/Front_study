@@ -1,0 +1,14 @@
+
+div, span, label {
+
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+
+    margin: 20px;
+
+}
+
+span{
+    display: inline-block;
+}
