@@ -8,7 +8,7 @@ let minutes = today.getMinutes(); // 분
 let seconds = today.getSeconds(); // 초
 
 console.log(hours);
-console.log(minutes);
+console.log(minutes); 
 console.log(seconds);
 
 // 브라우저 화면 HTML 로 출력

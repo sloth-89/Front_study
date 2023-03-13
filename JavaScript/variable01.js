@@ -12,7 +12,7 @@ console.log(2022-12-03)   // 숫자, 빼기로 인식
 
 var num = 123;
 var greeting = "hi";
-
+ 
 console.log(num);
 console.log(greeting);
 
