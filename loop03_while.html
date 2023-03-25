@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> while 반복문 </title>
+</head>
+<body>
+
+    <!--
+    1. while(조건식) {조건식이 참이면 반복적으로 실행하고자 하는 실행문; 증감식;}
+        let num;
+        num = 초기값;
+
+        while(조건식){
+            실행문;
+            증감식;
+        }
+
+    * 반복문에서 const 대신 let을 많이 사용 - 데이터 재할당이 되어야 하기 때문 *
+    
+    2. do{실행문} while(조건식)
+        let num;
+        num = 초기값;
+
+        do{
+            실행문; // 조건식과 무관하게 1회 강제 실행
+            증감식;
+        }
+        while(조건식)
+
+    for(초기값; 조건식; 증감식) - 조건식이 거짓이 되기 전까지 반복
+    while(조건식) - 조건식이 거짓이 되기 전까지 반복
+    do{실행문} while(조건식) - 실행문을 우선 1회 진행하고, 조건식 검사 후 거짓이 되기 전까지 반복
+
+    -->
+
+    <script>
+
+        // 1. 반복문 while 일반적 문법
+        let i = 1; // 초기값 : 변수 i는 1로 설정, const 데이터 재할당불가로 반복문에 사용x
+
+        while(i<10){ // 조건식 : 변수 i가 10보다 작을 때만 while 문을 반복
+            document.write(`${i}<br>`);
+            i++; // 증감식 : 반복할 때마다 변수 i를 1씩 증가시켜 변수 i가 10보다 커지면 반복문을 종료
+        }
+        // i가 1부터 시작해서 10보다 작을때까지 증가한다.
+        document.write("<br>")
+
+        // 2. while 예제1
+        // 1부터 100까지 숫자를 더하는 반복문 만들기
+        let sum = 0;
+        let add = 0;
+
+        while(add<=100){
+            sum = sum+add;
+            add++;
+        }
+        document.write(`1부터 100까지의 합 : ${sum}<br>`)
+        document.write("<br>")
+
+        // 1부터 4까지의 합
+        let sum2 = 0;
+        let add2 = 0;
+
+        while(add2<=4){
+            sum2 = sum2+add2;
+            add2++;
+        }
+        document.write(`1부터 4까지의 합 : ${sum2}<br>`)
+        document.write("<br>")
+
+        // 3. do while 예제2
+        // 1부터 9까지 num에 들어간 숫자를 하나씩 반복적으로 브라우저에 출력하기
+        let num = 11; // 초기값 - num 값이 조건식에 해당하지 않는 11을 넣어도 강제 1회 실행됨
+
+        do{
+            document.write(`(1) do while 테스트 : ${num}<br>`) // 실행문
+            num++; //증감식
+        }
+        while(num<=9) // 조건식
+
+        // 4. while 예제3 - 위의 do while과 차이점 비교(조건식에 해당하지 않으면 1회 강제 출력도 안됨)
+        // 1부터 9까지 num에 들어간 숫자를 하나씩 반복적으로 브라우저에 출력하기
+        let num2 = 11; // 초기값에 1을 넣으면 반복문이 잘 실행되나 11로 설정하면 조건에 해당되지 않고 do와 다르게 한번도 실행되지 않는다.
+        
+        while(num2<=9){
+            document.write(`(2) while 테스트 : ${num2}<br>`) // 실행문
+            num2++ // 증감식
+        }
+
+    </script>
+
+
+    
+</body>
+</html>

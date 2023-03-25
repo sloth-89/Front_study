@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 객체 </title>
+</head>
+<body>
+
+    <script>
+
+        let person = {
+            name: "rest",
+            age: 33,
+            hobby: ["hiking","coding","workout"], // 객체를 배열로도 넣을 수 있다.
+            greeting: function(){
+                alert("Hi I'm " + this.name) // this는 객체가 속한 scope('{}')을 지칭
+                alert("I'm " + this.age)
+                alert("My hobby is " + this.hobby[0])
+            },
+            skill: {
+                java: "beginner",
+                js: "intermediate",
+                react: "advanced"
+            } // 객체 안에 객체
+        }
+        console.log(person)
+        console.log(person.name)
+        console.log(person.age)
+        console.log(person.hobby[0])
+
+        //객체 안에 객체를 불러오는 3가지 방식
+        console.log(person.skill.react)
+        console.log(person["skill"]["react"])
+        console.log(person[personSkill][persongReact])
+
+        // person.greeting
+        person.greeting()
+
+        let numbers = {
+            a: 1,
+            b: 2
+        }
+
+        numbers.a = 4
+        console.log(numbers)
+        
+    </script>
+    
+</body>
+</html>
