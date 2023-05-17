@@ -37,3 +37,11 @@ function print({param1, param2}){ // 키 값은 중괄호가 필요하다
 }
 // print 함수 자체는 준비만 해둔 상태고, 실행은 함수인 print(데이터) 호출해야 콘솔 출력 실행이됨.
 print(obj);
+
+
+// 새로운 변수 이름으로 할당하기
+
+let name = {name01: 'Kim', name02: 'Jenny'};
+let {name01: lastName, name02: firstName } = name;
+console.log(lastName);
+console.log(firstName);
